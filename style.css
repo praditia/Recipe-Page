@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--stone-100);
+  color: var(--stone-600);
+  min-height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--stone-900);
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 720px;
+
+  padding: 40px;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+
+  border-radius: 24px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.profile {
+  margin-bottom: 32px;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+}
+
+.preparation {
+  background-color: var(--rose-50);
+  border-radius: 12px;
+
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.preparation h1 {
+  color: var(--rose-800);
+  font-size: 1.2rem;
+}
+
+.preparation ul,
+.info-ingredients {
+  line-height: 2rem;
+}
+
+.info-instructions li,
+.desc {
+  line-height: 1.5rem;
+}
+
+.title,
+.sub-title {
+  font-family: 'Young Serif', sans-serif;
+  font-weight: 400;
+}
+
+.sub-title,
+.number-info {
+  color: var(--brown-800);
+}
+
+hr {
+  margin: 24px 0;
+
+  outline: none;
+  border: none;
+  height: 1px;
+  background: var(--stone-150);
+}
+
+.info-ingredients ul,
+.info-instructions ol,
+.preparation ul {
+  padding: 16px 24px;
+}
+
+.info-instructions li {
+  margin-bottom: 8px;
+}
+
+.table-nutrition {
+  margin-top: 24px;
+}
+
+li::marker {
+  color: var(--brown-800);
+  font-weight: 800;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+tr .number-info {
+  font-weight: 800;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  img {
+    border-radius: 0;
+  }
+
+  .content {
+    padding: 32px 40px;
+  }
+}
